@@ -1,23 +1,28 @@
 public class usuario {
     public static void main(String[] args) throws Exception {
         
-        smartTv smartTv = new smartTv();
+        smartTv smart = new smartTv();
 
-        smartTv.diminuirVolume();
-        smartTv.diminuirVolume();
-        smartTv.diminuirVolume();
-        smartTv.aumentarVolume();
-        System.out.println("Volume Atual? " + smartTv.volume);
+        smart.diminuirVolume();
+        smart.diminuirVolume();
+        smart.diminuirVolume();
+        smart.aumentarVolume();
+
+        System.out.println("Canal Atual? " + smart.canal);
+        smart.mudarCanal(13);
+        System.out.println("Canal Atual? " + smart.canal);
+
+        System.out.println("Volume Atual? " + smart.volume);
     
         
-        System.out.println("TV Ligada? " + smartTv.ligada);
-        System.out.println("Canal Atual? " + smartTv.canal);
-        System.out.println("Volume Atual? " + smartTv.volume);
-    
-        smartTv.ligar();
-        System.out.println("Novo status -> TV Ligada? " + smartTv.ligada);
+        System.out.println("TV Ligada? " + smart.ligada);
         
-        smartTv.desligar();
-        System.out.println("Novo status -> TV Ligada? " + smartTv.ligada);
+        System.out.println("Volume Atual? " + smart.volume);
+    
+        smart.ligar();
+        System.out.println("Novo status -> TV Ligada? " + smart.ligada);
+        
+        smart.desligar();
+        System.out.println("Novo status -> TV Ligada? " + smart.ligada);
     }
 }
